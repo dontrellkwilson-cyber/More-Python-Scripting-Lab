@@ -1,21 +1,17 @@
-<h1>Introduction to Python Scripting</h1>
+<h1>More Python Scripting Lab</h1>
 
 <h2>Description:</h2>
-Python is an interpreted, object-oriented, high-level language. It uses dynamic typing and built-in data structures, which help you build scripts fast. You can also import libraries to reduce the amount of code you write.
+Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. It's built-in data structures and dynamic typing support rapid application development. Python also allows developers to import libraries, which reduces the amount of code required to complete tasks.
 <br />
-
 
 <h2>Languages and Technologies Used:</h2>
 
 - <b>Python</b> 
   
-
 <h2>Environments Used:</h2>
 
 - <b>Kali Linux</b>
   
-
-
 <h2>Lab Walk-Through:</h2>
 
 **Task 1**:
@@ -25,92 +21,117 @@ Creating and Using Functions: <br />
 
 
 <p align="center">
- <img width="300" height="300" alt="Image" src="https://github.com/user-attachments/assets/75e0e1ad-5bcf-48cc-8e8b-407917322b46" /> &nbsp;&nbsp;&nbsp;&nbsp;<img width="500" height="500" alt="Image" src="https://github.com/user-attachments/assets/2e3bfcab-bcd3-404a-b2c2-885df09563aa" />
-
+<img width="1000" height="1000" alt="Image" src="https://github.com/user-attachments/assets/e5384b58-9ec9-4447-a537-57c88d185c38" />
+<br><br>
+<img width="1000" height="1000" alt="Image" src="https://github.com/user-attachments/assets/5351429c-2d9b-471e-9c83-4a42f9c7d046" />
+<br><br>
+</p>
  
-**` Tasks Completed `**
-- A function was created and executed. User input was passed into the function, and conditional logic was applied to produce output.
+**` Instructions `**
+- Open a terminal in Kali (**` CTRL + ALT + T `**) and create a new document with nano.
 - **Type the following**:
-   - nano sample1.py
-   - print(“Hello Everybody!”)
+   - nano Sample01.py
+   - #!/usr/bin/python3
+   - number = int(input("Enter a number: "))
+   - def calculation(number):
+   - if number < 5:
+      - print(number, "is less than 5")
+    - elif number >= 5:
+        - print(number, "is greater than or equal to 5")
+    - else:
+        - print("Error")
+    - return
+    - calculation(number)
 - Save this file and exit.
    - **Save**: CTRL + O
    - **Exit**: CTRL + X
 
+**` Let’s break down what this script is doing `**:
+- 1. The first line is creating a variable that will store an integer when the user enters one after they are prompted.
+- 2. This is our definition (or function) and uses the number variable throughout the definition.
+- 3. This section contains simple calculations.
+- 4. This line is returning the result of the calculations back to the definition in section 3 and is updating the number variable inside the definition.
+- 5. This is printing the “number” variable after the definition has performed some function on it.
+
+**` Making a Python Script Executable: `**
+- chmod +x Sample01.py
+- ./Sample01.py
+
+**` Tasks Completed `**
+- A function was created and executed. User input was passed into the function, and conditional logic was applied to produce output.
+  
 **` Overview `**
 - In this task, a Python function is created and executed. The function evaluates a number provided by the user and prints a result based on defined conditions. Functions group related code into reusable blocks. This approach reduces redundancy and improves code organization.
 
-  
-<p align="center">
-Making a Python Script Executable:  <br/>
-
- 
-<p align="center">
-  <img width="300" height="300" alt="Image" src="https://github.com/user-attachments/assets/25620c12-f8ef-4388-8476-85532cbd1df0" />
-  <br><br>
-  <img width="500" height="500" alt="Image" src="https://github.com/user-attachments/assets/dec8850f-bffb-4a3a-b36e-60c255b85ad2" /> 
-  <br><br>
-  <img width="300" height="300" alt="Image" src="https://github.com/user-attachments/assets/4426caae-ddf5-435d-b99d-c2e909b5ace0" /> 
- <br><br>
-</p>
-
-  **` Tasks Completed `**
-- The script was executed using python3 sample1.py.
-- Updated with the shebang #!/usr/bin/python.
-- Made executable, allowing it to run directly from the terminal. 
-
-**` Overview `** 
--  This task shows how to execute a Python script and configure it to run independently. It covers adding the full path of the Python interpreter with a shebang (**` #! `**) at the top of the script and making the file executable in Kali Linux.
-
-  **Task 2**:
+**Task 2**:
  <p align="center">
-Working with Python Operators: <br/>
+Understanding Parameters: <br/>
 
 <p align="center">
- <img width="600" height="600" alt="Image" src="https://github.com/user-attachments/assets/60851a56-e013-458f-b0fb-9c6df602d840" />
-  <br><br>
- <img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/a5e614ba-005c-4849-ac73-31b500457871" />
- <br><br>
+<img width="1000" height="1000" alt="Image" src="https://github.com/user-attachments/assets/4585cf87-be34-4c16-b5e5-3df782355bb8" />
+<br><br>
+<img width="1000" height="1000" alt="Image" src="https://github.com/user-attachments/assets/76851c12-6165-4e02-9d8f-dffdc165aa35" />
 </p>
 
+- Note that the number parameter is merely there for accessing the data within the function, and that parameters and variable names don’t have to match.
+- In the above screenshot, we are passing number to the definition calculation even though the parameter is named integer. 
+- The parameter name is merely there for accessing the data within the definition.
+
+**` Making a Python Script Executable: `**
+- chmod +x Sample02.py
+- ./Sample02.py
+  
 **` Tasks Completed `**
-- A Python script was created and executed to perform mathematical calculations and comparison operations, demonstrating how operators work in Python. 
+- A variable was passed into a function with a different parameter name, and the function executed successfully.
 
 **` Overview `** 
--  This task introduces mathematical and comparison operators in Python. It shows how scripts perform calculations and evaluate conditions using standard operators.
+-  This task demonstrates the use of parameters within functions. The parameter name inside the function does not need to match the variable name passed into it. A parameter serves as a placeholder for the value provided when the function is called.
 
  **Task 3**:
 <p align="center">
-Python Variables and User Input:  <br/>
+Using Logical Operators:<br/>
 
-
- <img width="500" height="500" alt="Image" src="https://github.com/user-attachments/assets/b2b4ff6d-ee59-4f07-a2ee-ecb707644403" />
- <br><br>
-<img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/83bfab8b-88e4-44f0-aa40-b291b9ae68ec" />
- 
- **` Tasks Completed `**
-- A Python script was created to store and display variables, then updated to accept user input and print the entered value to the console. 
-
-**` Overview `** 
--  This task explains how Python uses variables to store data and how scripts accept input from a user. It covers common data types and demonstrates assigning values, printing output, and interacting with user input.
-
-  
-  **Task 4**:
 <p align="center">
-Python Conditional Statements (If, Elif, Else):<br/>
-
-
- <img width="500" height="500" alt="Image" src="https://github.com/user-attachments/assets/067b2f3a-03c5-49c1-9c8c-439711eb60eb" />
+<img width="1000" height="1000" alt="Image" src="https://github.com/user-attachments/assets/75f23e88-4eb9-407a-9207-8dd01493818c" />
  <br><br>
- <img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/989470c0-23be-4a76-9389-e0a9ccfe2e56" />
- <br><br>
+<img width="1000" height="1000" alt="Image" src="https://github.com/user-attachments/assets/6396f155-af65-441a-b288-ec2d040fc8a8" />
 
-   
- **` Tasks Completed `**
-- A Python script was created and executed using **`if `**, **`elif `**, and **` else statements`**  to display different messages depending on the number entered by the user. 
+**` Instructions `**
+- Open a terminal in Kali (**` CTRL + ALT + T `**) and create a new document with nano.
+- **Type the following**:
+   - nano Sample03.py
+   - #!/usr/bin/python3
+   - def calculation(num):
+   - if number < 5 and number 0:
+      - print(number, "is between 0 and 5")
+    - elif number >= 5 and num < 10:
+        - print(number, "is equal or greater than 5 less than 10")
+   - elif num > 10 or num < 0:
+      - print(num,"That number is not between 1 and 10!")
+    - else:
+        - print("out of range")
+    - return
+    - number = int(input(“Enter a number:”))
+    - calculation(number)
+- Save this file and exit.
+   - **Save**: CTRL + O
+   - **Exit**: CTRL + X
+ 
+**` Making a Python Script Executable: `**
+- chmod +x Sample03.py
+- ./Sample03.py
   
+ **` Tasks Completed `**
+- Multiple conditions were combined using logical operators. Different inputs were tested to observe how the program responded.
+
 **` Overview `** 
--  This task introduces conditional statements in Python, demonstrating how scripts can make decisions based on user input. It covers **`if`**, **`elif `**, and **` else statements`**  and shows how different code blocks execute depending on conditions.
+-  This task introduces logical operators within conditional statements. Logical operators expand the functionality of decision-making in code. The AND operator requires both conditions to be true. The OR operator requires at least one condition to be true.
+
+
+**` Key Takeaways `** 
+- Functions were used to organize code into reusable blocks.
+- Parameters were used to pass data into functions.
+- Logical operators were applied to control program flow and decision-making.
 
 
 <!--
