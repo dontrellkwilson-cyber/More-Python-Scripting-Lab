@@ -1,7 +1,7 @@
 <h1>More Python Scripting Lab</h1>
 
 <h2>Description:</h2>
-Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. It's built-in data structures and dynamic typing support rapid application development. Python also allows developers to import libraries, which reduces the amount of code required to complete tasks.
+Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its built-in data structures and dynamic typing support rapid application development. Python also allows developers to import libraries, which reduces the amount of code required to complete tasks.
 <br />
 
 <h2>Languages and Technologies Used:</h2>
